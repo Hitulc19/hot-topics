@@ -1,0 +1,215 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Color Scheme */
+/* Olive Green: #6B8E23, Dark Olive Green: #556B2F, Saddle Brown: #8B4513, Sandy Brown: #F4A460 */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6B8E23;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.logo h1 {
+    font-family: 'PT Serif', serif;
+    margin: 0;
+}
+
+nav {
+    margin: 1rem 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.masthead {
+    background-image: url('../img/masthead.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+}
+
+.masthead h2 {
+    font-family: 'PT Serif', serif;
+    color: white;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+article {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid #F4A460;
+}
+
+article h2 {
+    font-family: 'PT Serif', serif;
+    color: #556B2F;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+article img {
+    width: 400px;
+    /* Fixed size for images in articles on home page */
+    height: 400px;
+    /* Fixed size for images in articles on home page */
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p,
+.company-info,
+.social-media {
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+/* Portfolio Styles */
+.portfolio {
+    display: grid;
+    gap: 1rem;
+}
+
+.portfolio .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio .card img {
+    width: 300px;
+    /* Fixed size for images in portfolio */
+    height: 300px;
+    /* Fixed size for images in portfolio */
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 35rem) {
+    body {
+        font-size: 0.75rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    article {
+        text-align: center;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio .card {
+        width: 100%;
+        padding: 0 1rem;
+        /* Add padding to the left and right of the card */
+        box-sizing: border-box;
+        /* Ensure padding is included in the width */
+    }
+
+    .portfolio .card img {
+        width: 100%;
+        margin: 0 auto;
+        /* Center the image within the card */
+    }
+}
+
+@media (min-width: 35rem) and (max-width: 80rem) {
+    body {
+        font-size: 1rem;
+    }
+
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .portfolio .card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 80rem) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+    }
+
+    article figure {
+        width: 40%;
+    }
+
+    article p {
+        width: 60%;
+        padding-left: 1rem;
+    }
+
+    .portfolio {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .portfolio .card {
+        width: 100%;
+    }
+}
